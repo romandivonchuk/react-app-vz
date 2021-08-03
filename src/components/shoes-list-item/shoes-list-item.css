@@ -1,0 +1,52 @@
+.product-item {
+   position: relative;
+    max-width: 220px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: Corbel;
+    transition: .3s ease-in;
+ }
+ 
+ .product-item-photos {
+    width: 100%;
+ }
+
+.product-item-info {
+   font-size: 1rem;
+   margin-top: 1.4rem;
+   
+
+}
+.product-item-info .description {
+   font-size: 0.8rem;
+   margin-top: 0.2rem;
+
+}
+.product-item-info .price {
+   font-size: 1.4rem;
+   margin-top: 0.7rem;
+
+}
+
+.product-item .like {
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   background-color: rgb(192, 192, 192);
+   position: absolute;
+   top: 61%;
+   right: 4%;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+}
+
+.fa-heart {
+   color: white;
+   
+}
+
+ 
+
+ 

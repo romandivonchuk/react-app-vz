@@ -1,0 +1,167 @@
+.product-section {
+    padding-top: 4rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+/* .product-section__carousel > img {
+    width: 350px;
+} */
+
+
+
+.product-slider .main-content {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background: #000;
+    width: 450px;
+    height: 450px;
+    background: center / contain no-repeat;
+}
+
+.product-slider {
+    display: flex;
+
+}
+
+.product-slider > ul > li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.product-slider .side-content {
+    background: #000;
+    width: 100px;
+    height: 100px;
+    background: center / contain no-repeat;
+    background-size:cover;
+    background-position: bottom;
+}
+
+
+.product-list {
+    font-family: Corbel;
+}
+.product-list > h3 {
+    font-family: avenir next avenir next cyr;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    font-size: 1.5rem;
+}
+.product-list .description {
+    margin-top: 0.5rem;
+    color: #999999;
+    font-size: 0.9  rem;
+    letter-spacing: 0.1rem;
+}
+
+.product-list .price {
+    font-family: Corbel;
+    font-weight: bolder;
+}
+
+.product-list .select-container {
+    margin-top: 5rem;
+    position: relative;
+}
+
+
+
+.select-container .select-title {
+    font-family: Corbel;
+    font-size: 1rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+.select-container > select {
+    
+    margin-top: 0.5rem;
+    padding: 0.35rem 0.5rem;
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+   
+    font-family: avenir next avenir next cyr;
+    font-size: 1.2rem;
+    color: #444444;
+
+}
+
+.select-container > select:focus {
+    outline: 0;
+    
+
+}
+
+.button-add-to-cart {
+    margin-top: 2rem;
+    padding: 0.7rem 8rem;
+    font-family: Corbel;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    
+    
+    background: #00ab5a;
+    border: 1px solid #00ab5a;
+    transition: all 0.3s;
+    
+}
+.button-add-to-cart:hover {
+   
+   
+    color: #000;
+    background: #fff;
+    border: 1px solid #00ab5a
+}
+
+.buy-one-click {
+    margin-top: 2rem;
+}
+
+.buy-one-click .input {
+    padding: 0.7rem 1.3rem;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+
+}
+.buy-one-click .input:focus {
+    outline: 0;
+
+}
+
+.buy-one-click .input__button {
+    margin-top: 1rem;
+    border: 2px solid #000;
+    background-color: #000;
+    font-weight: bolder;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+
+}
+
+
+.buy-one-click .input__button:hover {
+   
+    background-color: rgb(39, 39, 39);
+}
+
+.product-details {
+    margin-top: 4rem;
+    
+}
+.product-details > ul > li{
+    list-style: none;
+    font-family: Corbel;
+    color: #666;
+    font-size: 1.1rem;
+
+}

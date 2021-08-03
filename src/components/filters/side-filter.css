@@ -1,0 +1,93 @@
+.side-filter {
+    flex: 0.3
+}
+
+.filter-name {
+    text-transform: uppercase;
+}
+
+.side-filter ul {
+    list-style: none;
+}
+.side-filter ul > h3 {
+    font-family: Corbel;
+    font-size: 0.9rem;
+    color: #838383;
+}
+
+.side-filter ul > li {
+    font-family: Corbel;
+    font-size: 0.9rem;
+    color: #999999;
+    margin-top: 8px;
+}
+
+.filter-shoes-item.active {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.filter-name {
+    font-family: Corbel;
+    font-size: 1.2rem;
+    color: #838383;
+
+}
+
+.filter-shoes {
+    margin-top: 1.2rem;
+}
+.filter-size {
+    margin-top: 1.2rem;
+}
+.filter-size > h3 {
+    display: block;
+    margin-bottom: 1rem;
+}
+.filter-color {
+    margin-top: 1.2rem;
+}
+.filter-color > h3 {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.filter-color-item > label {
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.filter-color-item > label> input {
+    display: none;
+
+}
+.stlradio {
+    display: inline-block;
+    border: 2px solid #b2b1b1;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    vertical-align: middle;
+    box-sizing: border-box;
+    margin-right: 4px;
+  border-radius: 50%;
+    background-color:#ffffff;
+}
+
+.stlradio:before {
+    content: '';
+    background: #1c1e25;
+    width: 8px;
+    height: 8px;
+    opacity: 0;
+    transition: 0.3s;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 300px;
+}
+
+.filter-color-item > label> input:checked + .stlradio:before {
+    opacity: 1;
+}
+

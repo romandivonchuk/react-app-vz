@@ -1,0 +1,139 @@
+
+
+.modals {
+    height: 100vh;
+    width:  100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    overflow-y: auto;
+    
+}
+
+.modals.active {
+    opacity: 1;
+    pointer-events: all;
+    
+}
+
+
+
+.modals__content {
+    display: flex;
+    padding: 20px;
+    border-radius: 3px;
+    background-color: white;
+    max-width: 550px;
+    height: fit-content;
+    transform: scale(0.5);
+    transition: 0.5s all;
+
+}
+.modals__content.active {
+    transform: scale(1);
+    
+}
+
+.item__content {
+    flex: 0.6;
+    margin-right: 3rem;
+}
+
+.item__content_container {
+    font-family: Corbel;
+    margin-bottom: 1rem;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #ccc;
+    
+}
+.item__content_container:last-child {
+    border-bottom: 1px solid #ccc;
+    
+}
+
+.item__content_container .photos {
+    width: 100px;
+    height: 150px;
+    margin-right: 10px;
+}
+
+.item__content_brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.item__content_brand p {
+    margin: 0.5rem 0;
+    color: #000;
+    text-align: left;
+}
+
+.item__content_btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+}
+
+.item__content_brand  button {
+    background: #fff;
+    border: none;
+}
+
+.item__content_btn > span {
+    margin: 0 10px;
+}
+
+.del-btn {
+    position: absolute;
+    transform: translateX(140px);
+    
+}
+
+.shooping-cart-total {
+    margin-top: 2rem;
+    
+    flex: 0.5
+}
+.shooping-cart-total > .container__total { 
+    padding: 10px;
+    background: rgb(240, 240, 240);
+}
+.shooping-cart-total > .container__total > div {
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Corbel;
+    font-size: 1.1rem;
+    
+}
+
+.container__total .shooping-cart-total-btn {
+
+    margin-top: 0.5rem;
+    padding: 5px 3px;
+    border: 1px solid #00ab5a;
+    background-color: #00ab5a;
+    color: #fff;
+    font-family: Corbel;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-align: justify
+}
+
+.container__total .shooping-cart-total-btn:hover {
+    background-color: #fff;
+    color: #000;
+}

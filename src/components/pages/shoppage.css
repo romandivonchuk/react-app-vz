@@ -1,0 +1,32 @@
+.breadcrumbs {
+    border-bottom: 1px solid rgb(239 239 239);;
+}
+
+.breadcrumbs__container {
+    max-width: 1260px;
+    margin: 0 auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.breadcrumbs__container > a {
+    text-decoration: none;
+    color: rgb(160, 160, 160);
+    display: block;
+    margin-left: 10px;
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+
+.breadcrumbs__container > a > span {
+    margin-left: 5px;
+}
+
+.shop__container {
+    margin: 0 auto;
+    max-width: 1260px;
+    margin-top: 3rem;
+    display: flex;
+}
