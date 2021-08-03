@@ -142,7 +142,9 @@ export default class ShoesService {
     ]
 
     async getAllShoes() {
+        console.log('FETCH!!!!!')
         const res = await fetch("api/products", { mode: 'cors' })
+        console.log(res)
         if (!res.ok) {
             throw new Error(`could not fetch "/api/products" , received ${res.status}`)
         }
