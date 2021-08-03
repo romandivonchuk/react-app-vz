@@ -143,11 +143,7 @@ export default class ShoesService {
 
     async getAllShoes() {
         console.log('FETCH!!!!!')
-        const res = await fetch("https://vz-backend.herokuapp.com/api/products", {
-            headers: {
-                "accepts": "application/json"
-            }
-        })
+        const res = await fetch("https://vz-backend.herokuapp.com/api/products", { mode: 'no-cors' })
         console.log(res)
         if (!res.ok) {
             throw new Error(`could not fetch "/api/products" , received ${res.status}`)
