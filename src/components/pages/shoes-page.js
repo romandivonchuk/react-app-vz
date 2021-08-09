@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 
 import withShoesstoreService from '../hoc'
 import ErrorIndicator from '../error-indicator'
-import { fetchShoes } from '../../actions/actions'
+import { fetchShoes, filterSortHighest, filterSortLowest, filterSortNone } from '../../actions/actions'
 
 import SideFilters from '../filters/side-filtres'
 import ShoesList from '../shoes-list'
@@ -27,22 +27,38 @@ class ShopPage extends React.Component {
     }
 
 
+    onhandlerSort = (value) => {
+        const { filterSortHighest, filterSortLowest, filterSortNone } = this.props
+
+        if (value === 'none') {
+            filterSortNone();
+
+        } else if (value === 'lowest') {
+            filterSortLowest();
+
+        } else if (value === 'highest') {
+            filterSortHighest();
+
+        }
+    }
+
 
     render() {
+
 
         const { location } = this.props.history
         const values = queryString.parse(location.search)
 
         const valuesArray = Object.entries(values)
 
-        const { shoes, error } = this.props
+        const { shoes, error, sort } = this.props
 
         if (error) {
             return <ErrorIndicator />
         }
 
-        let shoesArrayForShoesList = shoes
-        let shoesArrayForShoesFilter = shoes
+        let shoesArrayForShoesList = shoes.slice();
+        let shoesArrayForShoesFilter = shoes.slice();
 
         if (values.sex !== undefined) {
             shoesArrayForShoesList = shoesArrayForShoesList.filter(item => item.sex === values.sex)
@@ -62,6 +78,12 @@ class ShopPage extends React.Component {
 
         }
 
+        if (sort !== undefined) {
+            shoesArrayForShoesList = sort(shoesArrayForShoesList)
+
+        }
+
+
 
 
         return (
@@ -72,6 +94,15 @@ class ShopPage extends React.Component {
                         {valuesArray.map((item, idx) => <Link key={idx} to={`/shop?${item[0]}=${item[1]}`}>{item[1]}<span>/</span> </Link>)}
 
                     </div>
+                </div>
+                <div className="shop__container sort">
+
+                    <select onChange={(e) => { this.onhandlerSort(e.target.value) }} className="sort" name="sort">
+                        <option value="none"> без фільтру</option>
+                        <option value="lowest"> від меншої ціни</option>
+                        <option value="highest"> від більшої ціни</option>
+                    </select>
+                    <p>сортувати</p>
                 </div>
 
                 <div className="shop__container">
@@ -94,6 +125,7 @@ const mapStateToProps = (state) => {
     return {
         shoes: state.shoesList.shoes,
         error: state.shoesList.error,
+        sort: state.filtersShopPage.filterSort
     }
 
 };
@@ -103,6 +135,10 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     return bindActionCreators(
         {
             fetchShoes: fetchShoes(shoesstoreService),
+            filterSortHighest,
+            filterSortLowest,
+            filterSortNone
+
         }, dispatch
     )
 };

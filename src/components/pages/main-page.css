@@ -29,7 +29,8 @@
 .section__main__item {
     position: relative;
 }
-.section__main__item > button {
+.section__main__item > a {
+    text-decoration: none;
     position: absolute;
     
     left: 50%;
@@ -47,7 +48,7 @@
     transition: 0.3s ease-in;
 }
 
-.section__main__item button:hover { 
+.section__main__item a:hover { 
     background-color: #378b91;
     color: #fff;
 }
@@ -72,7 +73,8 @@
     width: 100%;
 }
 
-.new__sale__item button {
+.new__sale__item a {
+    text-decoration: none;
     position: absolute;
     left: 50%;
 
@@ -89,7 +91,7 @@
     transition: 0.3s ease-in;
 }
 
-.new__sale__item button:hover { 
+.new__sale__item a:hover { 
     background-color: #378b91;
     color: #fff;
    
@@ -264,7 +266,9 @@
     color: #fff;
 }
 
-.your__chair__shoes button {
+.your__chair__shoes a {
+    display: block;
+    text-decoration: none;
     margin-top: 10px;
     text-align: center;
     background-color: #fff;
@@ -277,7 +281,7 @@
     transition: 0.3s ease-in;
 }
 
-.your__chair__shoes button:hover { 
+.your__chair__shoes a:hover { 
     background-color: #378b91;
     color: #fff;
    

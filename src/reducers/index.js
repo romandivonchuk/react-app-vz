@@ -105,14 +105,14 @@ const updateOrder = (state, shoesId, quantity) => {
 }
 
 
+
 const updateShoppingCart = (state, action) => {
 
     if (state === undefined) {
         return {
             status: false,
             cartItems: [],
-            orderTotal: 0,
-
+            orderTotal: 0
         }
     }
     const { shoppingCart } = state
@@ -153,10 +153,46 @@ const updateShoppingCart = (state, action) => {
 
 }
 
+
+const updateFiltersShopPage = (state, action) => {
+    if (state === undefined) {
+        return {
+            filterSort: (arr) => { return arr },
+
+        }
+    }
+
+    const { filtersShopPage } = state
+
+    switch (action.type) {
+
+        case 'SORT_LOWEST':
+            return {
+                filterSort: (arr) => { return arr.sort((a, b) => a.price - b.price) }
+            };
+        case 'SORT_HIGHEST':
+            return {
+                filterSort: (arr) => { return arr.sort((a, b) => b.price - a.price) }
+            };
+        case 'SORT_NONE':
+            return {
+                filterSort: (arr) => { return arr }
+            };
+
+        default:
+            return state.filtersShopPage;
+    }
+
+
+}
+
 const reducer = (state, action) => {
+
+
     return {
         shoesList: updateShoesList(state, action),
         shoppingCart: updateShoppingCart(state, action),
+        filtersShopPage: updateFiltersShopPage(state, action)
     }
 }
 

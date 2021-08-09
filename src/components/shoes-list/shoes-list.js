@@ -32,11 +32,14 @@ class ShoesList extends React.Component {
 
 
         return (
-            <div className="shoes__list">
+            <>
 
-                {shoesArray.map((shoes, idx) => <ShoesListItem shoes={shoes} key={idx} id={shoes._id} />)}
+                <div className="shoes__list">
 
-            </div>
+                    {shoesArray.map((shoes) => <ShoesListItem shoes={shoes} key={shoes._id} id={shoes._id} />)}
+
+                </div>
+            </>
         )
     }
 }

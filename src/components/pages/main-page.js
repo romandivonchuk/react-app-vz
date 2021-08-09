@@ -14,17 +14,17 @@ const MainPage = () => {
                     <div className="section__main__item">
                         <img src={`${window.location.origin}/images/woman.jpg`} alt="" />
 
-                        <button>Жінкам</button>
+                        <Link to="/shop?sex=woman">Жінкам</Link>
                     </div>
                     <div className="section__main__item">
                         <img src={`${window.location.origin}/images/man.jpg`} alt="" />
 
-                        <button>Чоловікам</button>
+                        <Link to="/shop?sex=man">Чоловікам</Link>
                     </div>
                     <div className="section__main__item">
                         <img src={`${window.location.origin}/images/children.jpg`} alt="" />
 
-                        <button>Дітям</button>
+                        <Link to="/shop?sex=children">Дітям</Link>
                     </div>
                 </section>
 
@@ -32,12 +32,12 @@ const MainPage = () => {
                     <div className="new__sale__item">
                         <img src={`${window.location.origin}/images/new.png`} alt="" />
 
-                        <button>New</button>
+                        <Link to="/shop?new=1">new</Link>
                     </div>
                     <div className="new__sale__item">
                         <img src={`${window.location.origin}/images/sale.png`} alt="" />
 
-                        <button>Sale</button>
+                        <Link to="/shop?sale=1">sale</Link>
                     </div>
                 </section>
 
@@ -65,7 +65,7 @@ const MainPage = () => {
                         <img src={`${window.location.origin}/images/lovess.png`} alt="" />
                         <div className="inside__container">
                             <p className="title">ТВОЯ ЛЮБИМА<br />ПАРА ВЗУТТЯ</p>
-                            <button>Дивитись</button>
+                            <Link to="/shop">Дивитись</Link>
                         </div>
 
                     </div>

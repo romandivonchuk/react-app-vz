@@ -80,7 +80,7 @@ const SizeFilter = (props) => {
 
 
                     }}
-                        className="radio__input" type="radio" id={`size-${idx}`} name="size" value={size[0]} checked={check === size[0] ? true : false} />
+                        className="radio__input" type="radio" id={`size-${idx}`} name="size" value={size[0]} defaultChecked readOnly checked={check === size[0] ? true : false} />
                     <label className="radio__label" for={`size-${idx}`}>{size[0]} <span>{size[1]}</span></label>
                 </div>)}
 

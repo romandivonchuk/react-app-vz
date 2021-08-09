@@ -30,3 +30,26 @@
     margin-top: 3rem;
     display: flex;
 }
+
+.shop__container.sort {
+    max-width: 870px;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row-reverse;  
+    align-items: center;
+}
+.shop__container.sort > select {
+    margin-left: 1rem;
+    padding: 0.35rem 0.5rem;
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+   
+    font-family: avenir next avenir next cyr;
+    font-size: 1rem;
+    color: #ccc;
+}
+.shop__container.sort > select:focus{
+    outline: none;
+    color: rgb(29, 29, 29);
+}

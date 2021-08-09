@@ -1,3 +1,24 @@
+const filterSortHighest = () => {
+    return {
+        type: 'SORT_HIGHEST',
+
+    }
+};
+
+const filterSortLowest = () => {
+    return {
+        type: 'SORT_LOWEST',
+
+    }
+};
+
+const filterSortNone = () => {
+    return {
+        type: 'SORT_NONE',
+
+    }
+};
+
 const shoesRequested = () => {
     return {
         type: 'FETCH_SHOES_REQUESTED',
@@ -74,4 +95,4 @@ const shoesDeleteFromCart = (shoesId) => {
 
 
 
-export { addShoes, shoesAddedToCart, shoesMinusFromCart, shoesDeleteFromCart, closeShoppingCart, openShoppingCart, shoesLoaded, shoesRequested, shoesError, fetchShoes }
+export { filterSortHighest, filterSortLowest, filterSortNone, addShoes, shoesAddedToCart, shoesMinusFromCart, shoesDeleteFromCart, closeShoppingCart, openShoppingCart, shoesLoaded, shoesRequested, shoesError, fetchShoes }

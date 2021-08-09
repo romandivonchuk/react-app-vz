@@ -123,25 +123,6 @@ const mapStateToProps = (state) => {
 }
 
 
-// const mapDispatchToProps = (dispatch, ownProps) => {
-//     const { shoesstoreService } = ownProps
-//     const fetch = bindActionCreators(
-//         {
-//             fetchShoes: fetchShoes(shoesstoreService),
-
-//         }, dispatch
-//     )
-
-//     return {
-//         ...fetch,
-//         add: (id) => {
-//             dispatch(shoesAddedToCart(id))
-//         }
-//     }
-
-
-// };
-
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     const { shoesstoreService } = ownProps
